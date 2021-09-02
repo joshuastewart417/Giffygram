@@ -1,0 +1,84 @@
+{
+   "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "recipientId": 2,
+      "message": "This is a message",
+      "isRead": false
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "recipientId": 3,
+      "message": "This is a message",
+      "isRead": false
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "recipientId": 3,
+      "message": "This is a message",
+      "isRead": false
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "recipientId": 2,
+      "message": "This is a message",
+      "isRead": true
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Shawty like a melody",
+      "imageURL": "https://media.giphy.com/media/vi9ob0h5bKmUU/giphy.gif?cid=ecf05e47gq8jc4y2z6pwjnaloanr7hum5cpoj7bkyld2k2hv&rid=giphy.gif&ct=g",
+      "description": "What it is",
+      "timeStamp": "1624894422"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "title": "Ask me about my",
+      "imageURL": "https://media.giphy.com/media/iJeJQdlZhQ25O/giphy.gif?cid=ecf05e47ieuewufgd95too2wxs3dkjf7ezjgv4flj04sv7pf&rid=giphy.gif&ct=g",
+      "description": "Life is a highway",
+      "timeStamp": "1624894422"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "title": "Spiderguy",
+      "imageURL": "https://media.giphy.com/media/oit9mu0v5LqzC/giphy.gif?cid=ecf05e47azom6reo6hiims719jrmtwz8ktf876sx19gyp5qh&rid=giphy.gif&ct=g",
+      "description": "What a guy!",
+      "timeStamp": "1624894422"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Jalon",
+      "surname": "Duncan",
+      "email": "duncanjalon@gmail.com",
+      "password": "jalon",
+      "profile_pic": "./images/Jalon_head.png"
+    },
+    {
+      "id": 2,
+      "name": "Joshua",
+      "surname": "Stewart",
+      "email": "joshua.stewart780@gmail.com",
+      "password": "joshua",
+      "profile_pic": "./images/Joshua_head.png"
+    },
+    {
+      "id": 3,
+      "name": "Sam",
+      "surname": "Carbine",
+      "email": "scarbine@me.com",
+      "password": "sam",
+      "profile_pic": "./images/Sam_head.png"
+    }
+  ]
+}
