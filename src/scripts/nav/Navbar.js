@@ -10,6 +10,9 @@ export const NavBar = () => {
             <div class="navigation__item navigation__search">
                 <input type="text" id="postSearch" placeholder="Search posts..." />
             </div>
+            <div class="navigation_item navigation__addnew">
+                <button id="entry_button" class="entry">Add New Gif!</button>
+            </div>    
             <div class="navigation__item navigation__message">
                 <img id="directMessageIcon" src="./images/fountain-pen.svg" alt="Direct message" />
             </div>

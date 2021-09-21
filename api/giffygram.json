@@ -32,10 +32,10 @@
   "posts": [
     {
       "id": 1,
-      "userId": 1,
       "title": "Shawty like a melody",
       "imageURL": "https://media.giphy.com/media/vi9ob0h5bKmUU/giphy.gif?cid=ecf05e47gq8jc4y2z6pwjnaloanr7hum5cpoj7bkyld2k2hv&rid=giphy.gif&ct=g",
       "description": "What it is",
+      "userId": 7,
       "timestamp": 1630683365100
     },
     {
@@ -55,14 +55,6 @@
       "timestamp": 1630683365100
     },
     {
-      "title": "This is a practice test",
-      "imageURL": "https://media.giphy.com/media/gjgWQA5QBuBmUZahOP/giphy.gif?cid=ecf05e47befb2924e01131bd548cb9e295bad13f3e5fe471&rid=giphy.gif&ct=g",
-      "description": "That boy gettin' down",
-      "userId": 1,
-      "timestamp": 1630683365100,
-      "id": 4
-    },
-    {
       "title": "I'm gonna try something new now",
       "imageURL": "https://media.giphy.com/media/l4Ep3mmmj7Bw3adWw/giphy.gif?cid=ecf05e47o7i56b0i7dvn287g684hbr6akk7908p2acmjkgm1&rid=giphy.gif&ct=g",
       "description": "That boy gettin' down",
@@ -77,6 +69,22 @@
       "userId": 1,
       "timestamp": 1630683365100,
       "id": 6
+    },
+    {
+      "title": "He really needs to push",
+      "imageURL": "https://media.giphy.com/media/lTkXCXQ4RB2T9416nR/giphy.gif?cid=ecf05e4779zj7noqiha9ong72vf4s2a6s7pebfjocoq54pgc&rid=giphy.gif&ct=g",
+      "description": "Not pull",
+      "userId": 1,
+      "timestamp": 1632238179798,
+      "id": 8
+    },
+    {
+      "id": 9,
+      "title": "Let him in!",
+      "imageURL": "https://media.giphy.com/media/yx400dIdkwWdsCgWYp/giphy.gif?cid=ecf05e4713z1frlm8dxesjuvqo0xqrsxr5ltaq80ed94x8mf&rid=giphy.gif&ct=g",
+      "description": "Forreal",
+      "userId": 7,
+      "timestamp": 1632250273211
     }
   ],
   "users": [
@@ -103,6 +111,31 @@
       "email": "rmartin@me.com",
       "password": "ricky",
       "profile_pic": "./images/Sam_head.png"
+    },
+    {
+      "name": "JoshuaS",
+      "email": "joshua@stewart.com",
+      "id": 4
+    },
+    {
+      "name": "JoshuaS",
+      "email": "joshua@stewart.com",
+      "id": 5
+    },
+    {
+      "name": "Jerry",
+      "email": "jerry@jerry.com",
+      "id": 6
+    },
+    {
+      "name": "jerry",
+      "email": "jerry@jerry.com",
+      "id": 7
+    },
+    {
+      "name": "joshua",
+      "email": "joshua@test.com",
+      "id": 8
     }
   ]
 }
