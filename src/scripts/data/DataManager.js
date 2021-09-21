@@ -15,9 +15,11 @@ export const usePostCollection = () => {
 };
 
 export const getPosts = () => {
-  return fetch("http://localhost:8088/posts?_expand=user")
+  const userId = getLoggedInUser().id;
+  return fetch(`http://localhost:8088/posts?_expand=user`)
     .then((response) => response.json())
     .then((parsedResponse) => {
+      console.log("data with user", parsedResponse);
       postCollection = parsedResponse;
       return parsedResponse;
     });
@@ -62,14 +64,63 @@ export const updatePost = (postObj) => {
     .then(getPosts);
 };
 
-const loggedInUser = {
-  id: 1,
-  name: "Bryan",
-  email: "bryan@bn.com",
+export const setLoggedInUser = (userObj) => {
+  loggedInUser = userObj;
+};
+
+let loggedInUser = {};
+
+export const loginUser = (userObj) => {
+  return fetch(
+    `http://localhost:8088/users?name=${userObj.name}&email=${userObj.email}`
+  )
+    .then((response) => response.json())
+    .then((parsedUser) => {
+      //is there a user?
+      console.log("parsedUser", parsedUser); //data is returned as an array
+      if (parsedUser.length > 0) {
+        setLoggedInUser(parsedUser[0]);
+        return getLoggedInUser();
+      } else {
+        //no user
+        return false;
+      }
+    });
+};
+
+export const registerUser = (userObj) => {
+  return fetch(`http://localhost:8088/users`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userObj),
+  })
+    .then((response) => response.json())
+    .then((parsedUser) => {
+      setLoggedInUser(parsedUser);
+      return getLoggedInUser();
+    });
 };
 
 export const getLoggedInUser = () => {
   return loggedInUser;
 };
 
+export const logoutUser = () => {
+  loggedInUser = {};
+};
+
 let postCollection = [];
+let userCollection = [];
+
+export const getUserPosts = () => {
+  const userId = getLoggedInUser().id;
+  return fetch(`http://localhost:8088/posts?_expand=user&userId=${userId}`)
+    .then((response) => response.json())
+    .then((parsedList) => {
+      console.log("data with user", parsedList);
+      userCollection = parsedList;
+      return parsedList;
+    });
+};

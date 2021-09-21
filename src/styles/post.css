@@ -30,15 +30,21 @@
   margin-left: 3vw;
   text-align: center;
   border-radius: 15px;
+  width: 10vw;
+}
+
+.entry_button_wrapper button:hover {
+  box-shadow: 2px 2px 1px black;
+  cursor: pointer;
 }
 
 .newPost__input {
-  width: 30rem;
+  width: 50vw;
   margin: 0.5rem 0;
 }
 
 .newPost__description {
-  width: 80%;
+  width: 50vw;
   height: 5em;
 }
 
@@ -93,6 +99,22 @@
 
 .post__image {
   width: 45vw;
+}
+
+.post button {
+  padding: 1vw 1vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  text-align: center;
+  border-radius: 15px;
+  width: 10vw;
+}
+
+.post button:hover {
+  box-shadow: 2px 2px 3px slategrey;
+  cursor: pointer;
 }
 
 .post__actions {

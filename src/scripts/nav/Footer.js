@@ -13,6 +13,9 @@ export const Footer = () => {
                 </select>
                 <span id="postCount">0</span>
             </div>
+            <div class="userpost_toggle">
+                <input name = "checkbox" type="checkbox" id="userPost" value="HTML">
+            </div>
         </footer>
     `;
 };
