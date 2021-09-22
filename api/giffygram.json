@@ -29,6 +29,13 @@
       "isRead": true
     }
   ],
+  "userLikes": [
+    {
+      "postId": "6",
+      "userId": 1,
+      "id": 1
+    }
+  ],
   "posts": [
     {
       "id": 1,
@@ -85,6 +92,14 @@
       "description": "Forreal",
       "userId": 7,
       "timestamp": 1632250273211
+    },
+    {
+      "title": "They're coming Barbara!",
+      "imageURL": "https://media.giphy.com/media/l2YWiGu7jloe5GNiw/giphy.gif?cid=ecf05e47eb1a9317yrzbwsowiqdvtqyln9l6mwm51suu4gok&rid=giphy.gif&ct=g",
+      "description": "They're coming to get you!",
+      "userId": 7,
+      "timestamp": 1632328762210,
+      "id": 10
     }
   ],
   "users": [

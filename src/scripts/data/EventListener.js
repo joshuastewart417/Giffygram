@@ -12,6 +12,7 @@ import {
 import {
   showPostList,
   showPostEntry,
+  showLoginRegister,
   checkForUser,
   startGiffyGram,
 } from "../main.js";
@@ -67,7 +68,7 @@ export const EventListeners = () => {
       // be sure to import from the DataManager
       createPost(postObject);
       showPostList();
-      showPostEntry();
+      entryElement.style.display = "none";
     } else if (event.target.id === "newPost_submit") {
       showPostEntry();
     }
@@ -76,7 +77,7 @@ export const EventListeners = () => {
   applicationElement.addEventListener("click", (event) => {
     if (event.target.id === "newPost__cancel") {
       //clear the input fields
-      showPostEntry();
+      entryElement.style.display = "none";
     }
 
     applicationElement.addEventListener("change", (event) => {
@@ -105,6 +106,7 @@ export const EventListeners = () => {
       const postId = event.target.id.split("__")[1];
       getSinglePost(postId).then((response) => {
         showEdit(response);
+        entryElement.style.display = "flex";
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     }
@@ -138,13 +140,7 @@ export const EventListeners = () => {
     }
   });
 
-  applicationElement.addEventListener("click", (event) => {
-    if (event.target.id === "logout") {
-      logoutUser();
-      console.log(getLoggedInUser());
-    }
-  });
-
+  const entryElement = document.querySelector(".entryForm");
   applicationElement.addEventListener("click", (event) => {
     // event.preventDefault();
     if (event.target.id === "login__submit") {
@@ -157,9 +153,9 @@ export const EventListeners = () => {
         if (dbUserObj) {
           sessionStorage.setItem("user", JSON.stringify(dbUserObj));
           startGiffyGram();
+          entryElement.style.display = "none";
         } else {
           //got a false value - no user
-          const entryElement = document.querySelector(".entryForm");
           entryElement.innerHTML = `<p class="center">That user does not exist. Please try again or register for your free account.</p> ${LoginForm()} <hr/> <hr/> ${RegisterForm()}`;
         }
       });
@@ -187,6 +183,7 @@ export const EventListeners = () => {
       console.log(getLoggedInUser());
       sessionStorage.clear();
       checkForUser();
+      entryElement.style.display = "flex";
     }
   });
 
@@ -194,6 +191,7 @@ export const EventListeners = () => {
   checkbox.addEventListener("change", (event) => {
     const postElement = document.querySelector(".postList");
     if (event.target.checked) {
+      console.log("click");
       getUserPosts().then((response) => {
         postElement.innerHTML = PostList(response);
       });
@@ -204,6 +202,7 @@ export const EventListeners = () => {
 
   applicationElement.addEventListener("click", (event) => {
     if (event.target.id === "entry_button") {
+      entryElement.style.display = "flex";
       showPostEntry();
     }
   });
