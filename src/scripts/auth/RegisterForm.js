@@ -1,6 +1,6 @@
 export const RegisterForm = () => {
   return `
-		<div class="newPost">
+		<div class="newPost_register">
 		<h3>Register</h3>
 			<div>
 				<input value=""
@@ -16,9 +16,10 @@ export const RegisterForm = () => {
 					type="text"
 					placeholder="name@place.com" />
 			</div>
-
-			<button id="register__submit">Register</button>
-			<button id="login__cancel">Cancel</button>
+			<div class="registerForm_buttons">
+				<button id="register__submit">Register</button>
+				<button id="login__cancel">Cancel</button>
+			</div>
 		</div>
 	`;
 };

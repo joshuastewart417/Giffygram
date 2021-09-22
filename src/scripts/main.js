@@ -47,6 +47,11 @@ export const showPostEntry = () => {
   entryElement.innerHTML = PostEntry();
 };
 
+export const clearPostEntry = () => {
+  const entryElement = document.querySelector(".entryForm");
+  entryElement.innerHTML = "";
+};
+
 const showFooter = () => {
   const footerElement = document.querySelector("footer");
   footerElement.innerHTML = Footer();
@@ -61,7 +66,7 @@ export const checkForUser = () => {
   }
 };
 
-const showLoginRegister = () => {
+export const showLoginRegister = () => {
   showNavBar();
   const entryElement = document.querySelector(".entryForm");
   //template strings can be used here too
@@ -74,8 +79,9 @@ const showLoginRegister = () => {
 // =====================Function Declaration=================================
 
 export const startGiffyGram = () => {
+  const entryElement = document.querySelector(".entryForm");
+  entryElement.style.display = "none";
   showPostList();
-  // showPostEntry();
   showNavBar();
   showFooter();
 };

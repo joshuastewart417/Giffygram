@@ -1,6 +1,6 @@
 export const LoginForm = () => {
   return `
-		<div class="newPost">
+		<div class="newPost_login">
 		<h3>Login</h3>
 			<div>
 				<input value=""
@@ -16,9 +16,10 @@ export const LoginForm = () => {
 					type="text"
 					placeholder="name@place.com" />
 			</div>
-
-			<button id="login__submit">Login</button>
-			<button id="login__cancel">Cancel</button>
+			<div class="loginForm_buttons">
+				<button id="login__submit">Login</button>
+				<button id="login__cancel">Cancel</button>
+			</div>
 		</div>
 	`;
 };
